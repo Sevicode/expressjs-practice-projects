@@ -2,6 +2,30 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+
   body
+    nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+      a.navbar-brand(href='#') PC Repair
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarsExampleDefault.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='/')
+              | Home 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='/about') About
+          li.nav-item
+            a.nav-link.disabled(href='/services') Services
+          li.nav-item
+            a.nav-link.disabled(href='/contact') Contact
+
+  .container
     block content
+
+  hr
+  footer
+    p PC Repair &copy; 2020
